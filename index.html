@@ -29,7 +29,7 @@
 class: center, middle, inverse, title-slide
 
 # Statistika: Pertemuan 04
-## Pengantar Peluang
+## Konsep Peluang
 ### oleh Riana Hadiana
 ### Universitas Serang Raya
 
@@ -83,7 +83,7 @@ top:1em;right:1em;
 
 .pull-left[
 
-![](gb_01.jpg)
+![](gb_01.png)
 
 ]
 
@@ -91,557 +91,387 @@ top:1em;right:1em;
 &lt;br&gt;
 # **.purple[Outline]**
 
-# 1. Ukuran pemusatan data
-# 2. Ukuran penyebaran data
-# 3. Diagram Kotak Garis
+# 1. Ruang Contoh dan Kejadian
+# 2. Menghitung Peluang
 
 ]
 
 ---
-
-.pull.center[
-# **Peringkasan Data**
-]
-.pull-left[
-
-# Ukuran Pemusatan Data
-
-## Suatu gambaran/informasi yang memberikan penjelasan bahwa data memiliki satu/lebih titik dimana dia memusat/terkumpul
-
-
-]
-
---
-
-.pull-right[
-
-## Jenis ukuran pemusatan data
-
-1. ## Mean (rataan, rata-rata)
-1. ## Median
-1. ## Kuartil 
-1. ## Modus
-
-]
-
----
-
-.pull.center[
-# **Mean (rataan, rata-rata)**
-]
-
-.pull-left[
-
-### Merupakan pusat massa (centroid) dari sekumpulan data. Rata-rata memiliki sifat-sifat berikut:
-1. ### Digunakan untuk tipe data numerik
-1. ### Tidak bisa digunakan untuk tipe data kategorik dan diskret
-1. ### Mudah terpengaruh oleh adanya pencilan
-
-]
-
---
-
-.pull-right[
-
-### Rata-rata populasi
-
-$$
-\mu=\frac{1}{N}{\sum_{i=1}^{N}x_i}
-$$
-dengan `\(N\)` adalah banyaknya anggota populasi
-
-### Rata-rata sampel
-$$
-\bar{x}=\frac{1}{n}{\sum_{i=1}^{n}x_i}
-$$
-dengan `\(n\)` adalah banyaknya anggota contoh (sampel)
-]
-
----
-
-.pull-left[
-
-**Contoh 1**
-
-Berikut adalah nilai Ujian Tengah Semester Statistika dari 5 mahasiswa Teknik Informatika Unsera.
-
-`\(80 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90 \hspace{1cm}85\)`
-
-Hitunglah rata-rata nilai UTS kelima mahasiswa tersebut.
-
-*Penyelesaian*:
-
-$$
-`\begin{align*}
-\bar{x}&amp;=\frac{1}{n}{\sum_{i=1}^{n}x_i}\\
-&amp;=\frac{1}{5}{\sum_{i=1}^{5}x_i}\\
-&amp;=\frac{1}{5}(80+85+85+85+90+85)\\
-&amp;=\frac{1}{5}(425)\\
-&amp;=85
-\end{align*}`
-$$
-]
-
---
-
-.pull-right[
-
-**Contoh 2**
-
-Pada ujian akhir Mata Kuliah Statistika kelas A, terdapat 5 orang mendapatkan nilai 45, 3 orang mendapatkan nilai 50, 7 orang mendapatkan nilai 60, 5 orang mendapatkan nilai 70, 4 orang mendapatkan nilai 75, dan 4 orang mendapatkan nilai 90. Hitunglah rata-rata nilai ujian akhir Statistika di kelas A tersebut.
-
-*Penyelesaian*
-
-|*x* (= nilai)|45|50|60|70|75|90|
-|:-:|
-|*f* (= frekuensi)|5|3|7|5|4|4|
-
-$$
-`\begin{align*}
-\bar{x}&amp;=\frac{\sum f_ix_i}{\sum f_i}\\
-&amp;=\frac{45(5)+50(3)+60(7)+70(5)+75(4)+90(4)}{5+3+7+5+4+4}\\
-&amp;=64.46
-\end{align*}`
-$$
-
-]
-
----
-
-.pull.center[
-# **Median**
-]
-
-.pull-left[
-
-### Jika sekumpulan data diurutkan dari nilai terkecil ke nilai terbesar, maka nilai yang berada di tengah-tengah disebut .red[**Median**].
-
-### Banyaknya data yang lebih kecil dari Median .red[**sama banyak**] dengan data yang lebih besar dari Median.
-
-### Median tidak terpengaruh oleh adanya pencilan
-
-]
-
---
-
-.pull-right[
-
-### Langkah-langkah menentukan Median
-
-- ###Urutkan data dari terkecil ke terbesar
-- ###Jika banyaknya data ganjil,
-
-`$$\text{Median}=X_\frac{n+1}{2}$$`
-- ###Jika banyaknya data genap,
-
-`$$\text{Median}=\dfrac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}$$`
-]
-
----
-
-.pull-left[
-
-**Contoh 3**
-
-Tentukan median untuk data pada **Contoh 1**.
-
-*Penyelesaian*
-
-Urutkan data dari terkecil ke terbesar
-
-`\(80 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
-
-Karena banyaknya data `\(n=5\)` (ganjil), maka
-
-`\(\text{Median}=X_\frac{n+1}{2}=X_\frac{5+1}{2}=X_3\)` (data ke-3)
-
-`\(80 \hspace{1cm}85 \hspace{1cm}\underbrace{85}_{\text {Median}} \hspace{1cm}85 \hspace{1cm}90\)`
-
-Jadi, nilai mediannya adalah `\(85\)`.
-
-]
-
---
-
-.pull-right[
-
-**Contoh 4**
-
-Tentukan median untuk data berikut
-
-`\(2 \hspace{1cm}8 \hspace{1cm}3 \hspace{1cm}4 \hspace{1cm}1 \hspace{1cm}8\)`
-
-*Penyelesaian*
-
-Data setelah diurutkan
-
-`\(1 \hspace{1cm}2 \hspace{1cm}3 \hspace{1cm}4 \hspace{1cm}8 \hspace{1cm}8\)`&lt;br&gt;
-`\(X_1 \hspace{0.5cm}X_2 \hspace{0.5cm}X_3 \hspace{0.5cm}X_4 \hspace{0.5cm}X_5 \hspace{0.5cm}X_6\)`
-
-Karena banyaknya data `\(n=6\)` (genap), maka
-
-`$$\begin{align*}
-\text{Median}&amp;=\frac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}=\frac{X_\frac{6}{2}+X_{\frac{6}{2}+1}}{2}=\frac{X_3+X_4}{2}\\
-&amp;=\frac{3+4}{2}=3.5
-\end{align*}$$`
-
-`\(1 \hspace{1cm}2 \hspace{1cm}\underbrace{3 \hspace{1cm}4}_{\text {Median}=3.5} \hspace{1cm}8 \hspace{1cm}8\)`
-
-]
-
----
-.pull.center[
-
-#Rata-rata VS Median
-
-]
-
-.pull-left[
-
-Perhatikan kembali data pada **Contoh 1**.
-
-`\(80 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
-
-Data tersebum memiliki nilai rata-rata yang sama dengan Median, yaitu 85.
-
-Apa yang terjadi dengan rata-rata dan median jika data terkecil diganti dengan `\(10\)`? 
-
-`\(10\)` adalah nilai yang cukup jauh dari kumpulan nilai lainnya dan bisa dikategorikan sebagai pencilan (*outlier*)
-
-]
-
---
-
-.pull-right[
-
-`\(10 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
-
-Setelah `\(X_1\)` diganti menjadi `\(10\)`, mediannya tetap `\(85\)` dan rata-ratanya adalah
-
-$$
-`\begin{align*}
-\bar{x}&amp;=\frac{1}{n}{\sum_{i=1}^{n}x_i}=\frac{1}{5}(10+85+85+85+90+85)\\
-&amp;=\frac{1}{5}(425)=71
-\end{align*}`
-$$
-Jadi, .red[**median resisten terhadap pencilan**] sedangkan .red[**rata-rata tidak resisten pencilan**]
-]
-
----
-
-.pull.center[
-# **Kuartil**
-]
-
-.pull-left[
-
-### Nilai-nilai yang menyekat data terurut menjadi 4 kelompok data yang sama banyak.
-
-- ### Terdiri atas `\(Q_1\)`, `\(Q_2\)`, dan `\(Q_3\)`.
-- ### `\(Q_1\)` (kuartil 1) adalah nilai yang membagi data 25% di kiri dan 75% di kanan
-- ### `\(Q_2\)` (kuartil 2 atau .red[**median**]) adalah nilai yang membagi data 50% di kiri dan 50% di kanan
-]
-
---
-
-.pull-right[
-
-- ### `\(Q_3\)` (kuartil 3) adalah nilai yang membagi data 75% di kiri dan 25% di kanan
 
 ![](gb_02.jpg)
 
+---
+
+class: inverse, middle, center
+# **.blue[Mengapa] kita**
+# **perlu .green[belajar]**
+# .red[**Peluang**]
+# **???**
+
+---
+
+background-image: url("gb_03.jpg")
+
+class: bottom
+
+#**Uncertainty is around us**
+
+---
+&lt;br&gt;
+.pull.center[
+
+#.red[**Ketidakpastian**]
+
+]
+
+--
+
+.pull.center[
+
+# `\(\big\Downarrow\)`
+
+# .yellow[**Pengambilan Keputusan**]
+
+]
+
+--
+
+.pull.center[
+# `\(\big\Downarrow\)`
+
+# .green[**Konsep Peluang!**]
 ]
 
 ---
 
 .pull.center[
-# ** Langkah-Langkah Menentukan Kuartil**
+# **Ketidakpastian bersifat .red[Acak]**
 ]
-
-### 1. Metode Belah Dua
 
 .pull-left[
 
-- Urutkan data dari terkecil ke terbesar dan cari nilai median-nya
-- Gunakan nilai median untuk membagi data menjadi dua kelompok sama banyak.
-  - Jika banyaknya data awal adalah **ganjil**, bagi data menjadi dua bagian dengan **nilai median tidak diikutkan**
-  - Jika banyaknya data awal adalah **genap**, bagi data menjadi dua bagian
-- Nilai `\(Q_1\)` adalah median dari kelompok data pertama. Nilai `\(Q_3\)` adalah median dari kelompok data kedua.
+- ###Suatu fenomena dikatakan .red[ACAK] jika bersifat .red[**tidak pasti**]
+- ###Fenomena .red[ACAK] sering mengikuti suatu pola tertentu
+- ###Keteraturan .red[ACAK] dalam jangka panjang dapat didekati secara matematika
+
 ]
 
---
-
 .pull-right[
-
-**Banyaknya data ganjil**
-
-`\(\underbrace{X_1 \hspace{1cm}... \hspace{1cm}X_{\frac{n+1}{2}-1}}_{Q_1=\text{Median}} \hspace{1cm}X_\frac{n+1}{2} \hspace{1cm}\underbrace{X_{\frac{n+1}{2}+1} \hspace{1cm}...\hspace{1cm}X_n}_{Q_3=\text{Median}}\)`
-
-&lt;br&gt;&lt;br&gt;
-**Banyaknya data genap**
-
-`\(\underbrace{X_1 \hspace{1cm}... \hspace{1cm}X_{\frac{n}{2}}}_{Q_1=\text{Median}} \hspace{1cm}\underbrace{X_{\frac{n}{2}+1} \hspace{1cm}...\hspace{1cm}X_n}_{Q_3=\text{Median}}\)`
-
+- ###Studi matematika mengenai .red[KEACAKAN] `\(\Rightarrow\)` .red[TEORI PELUANG] – peluang merupakan suatu bentuk matematika dari sifat acak tersebut
+- ###Dengan ilmu peluang, kita dapat membuat daftar serentetan kemungkinan kejadian yang dapat terjadi
 ]
 
 ---
-
-.pull-left[
-
-** Contoh 5**
-
-Tentukan nilai `\(Q_1\)`, `\(Q_2\)`, dan `\(Q_3\)` dari data berikut.
-
-`\(10 \hspace{1cm}13 \hspace{1cm}24 \hspace{1cm}26 \hspace{1cm}30\)`
-
-*Penyelesaian*
-
-Banyaknya data adalah `\(n=5\)` dan data sudah terurut.
-
-`\(10 \hspace{1cm}13 \hspace{1cm}24 \hspace{1cm}26 \hspace{1cm}30\)`
-&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
-
-Karena `\(n=5\)` (ganjil), maka `$$\text{Median}=Q_2=X_\frac{n+1}{2}=X_\frac{5+1}{2}=X_3=24$$`
-
-Kumpulan data dibagi menjadi dua kelompok dengan tidak mengikutkan median atau `\(Q_2\)`
-
-`\(\underbrace{10 \hspace{1cm}13}_{\text{Kel 1}} \hspace{1cm}24 \hspace{1cm}\underbrace{26 \hspace{1cm}30}_{\text{Kel 2}}\)`
-
+.pull.center[
+# **Ketidakpastian**
 ]
-
---
-
-.pull-right[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-Kuartil 1 atau `\(Q_1\)` adalah median dari Kelompok 1. 
-
-`\(10 \hspace{1cm}13\)`&lt;br&gt;
-`\(X_1 \hspace{0.9cm}X_2\)`
-
-Karena banyaknya data pada kelompok 1 adalah `\(n=2\)`, maka
-
-$$
-`\begin{align*}
-Q_1&amp;=\dfrac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}=\dfrac{X_\frac{2}{2}+X_{\frac{2}{2}+1}}{2}=\dfrac{X_1+X_2}{2}\\
-&amp;=\dfrac{10+13}{2}=11.5
-\end{align*}`
-$$
-Kuartil 3 atau `\(Q_3\)` adalah median dari Kelompok 2. Dengan cara yang sama, maka diperoleh
-
-`\(Q_3=28\)`
-
-]
-
----
-
-.pull-left[
-
-** Contoh 6**
-
-Tentukan nilai `\(Q_1\)`, `\(Q_2\)`, dan `\(Q_3\)` dari data berikut.
-
-`\(18 \hspace{1cm}53 \hspace{1cm}14 \hspace{1cm}16 \hspace{1cm}35 \hspace{1cm}5\)`
-
-*Penyelesaian*
-
-Berikut adalah data yang sudah diurutkan.
-
-`\(5 \hspace{1cm}14 \hspace{1cm}16 \hspace{1cm}18 \hspace{1cm}35 \hspace{1cm}53\)`
-&lt;br&gt;
-`\(X_1 \hspace{0.6cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5 \hspace{0.8cm}X_6\)`
-
-Karena `\(n=6\)` (genap), maka Median `$$Q_2=\dfrac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}=\dfrac{X_3+X_4}{2}=\dfrac{16+18}{2}=17$$`
-
-Karena `\(n=6\)` (genap), maka kumpulan data langsung dibagi menjadi dua kelompok
-
-`\(\underbrace{5 \hspace{1cm}14 \hspace{1cm}16}_{\text{Kel 1}} \hspace{1cm}\underbrace{18 \hspace{1cm}35 \hspace{1cm}53}_{\text{Kel 2}}\)`
-
-]
-
---
-
-.pull-right[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-Kuartil 1 atau `\(Q_1\)` adalah median dari Kelompok 1. 
-
-`\(5 \hspace{1cm}14 \hspace{1cm}16\)`&lt;br&gt;
-`\(X_1 \hspace{0.6cm}X_2 \hspace{0.8cm}X_3\)`
-
-Karena banyaknya data pada kelompok 1 adalah `\(n=3\)` (ganjil), maka
-
-$$
-`\begin{align*}
-Q_1&amp;=X_\frac{n+1}{2}=X_\frac{3+1}{2}=X_2=14
-\end{align*}`
-$$
-Kuartil 3 atau `\(Q_3\)` adalah median dari Kelompok 2. Dengan cara yang sama, maka diperoleh
-
-`\(Q_3=35\)`
-]
-
+- ##Jika kita melemparkan sebuah mata uang logam, apakah yang akan keluar? Apakah sisi angka? Apakah sisi gambar?
+- ##Jika kita mengambil sebuah kartu dari satu set kartu bridge, apakah kita akan mendapatkan kartu King?
+- ##JIka seseorang mendapati hasil negatif pada tes antigen Covid-19, apakah memang benar dia tidak terpapar Covid-19?
 
 ---
 
 .pull.center[
-# ** Langkah-Langkah Menentukan Kuartil**
+# **Pengertian Peluang**
 ]
 
-### 2. Dengan interpolasi
+- ##**Peluang (_probability_)** `\(\Rightarrow\)` cara menyatakan .red[**ketidakpastian**] ke dalam bentuk .red[**angka**]
 
-.pull-left[
-- Urutkan data dari terkecil ke terbesar
-- Posisi kuartil ke-i adalah `\(\dfrac{i(n+1)}{4}=a.b\)` dengan `\(i=1,2,3\)`
-- Kuartil ke-i adalah `$$Q_i=X_a+0.b(X_{a+1}-X_a)$$`
 
-Lihat kembali data pada **Contoh 6** yang sudah terurut.
-
-`\(5 \hspace{1cm}14 \hspace{1cm}16 \hspace{1cm}18 \hspace{1cm}35 \hspace{1cm}53\)`
-&lt;br&gt;
-`\(X_1 \hspace{0.6cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5 \hspace{0.8cm}X_6\)`
-
-]
-
---
-
-.pull-right[
-Posisi kuartil ke-1 adalah `\(\dfrac{1(n+1)}{4}=1.75\)`, maka `\(a=1\)` dan `\(b=75\)`
-
-Kuartil ke-1 adalah 
-`$$\begin{align*}
-Q_1&amp;=X_a+0.b(X_{a+1}-X_a)=X_1+0.75(X_2-X_1)\\
-&amp;=5+0.75(14-5)=11.75
-\end{align*}$$`
-
-Dengan cara yang sama didapat `\(Q_2=17\)` dan `\(Q_3=39.5\)`
-
-]
+- ##**Peluang** `\(\Rightarrow\)` suatu ukuran atau nilai yang menyatakan kemungkinan terjadinya sebuah kejadian acak.
 
 ---
 
 .pull.center[
-# **Statistik 5 Serangkai**
-&lt;br&gt;
-
-![](gb_03.jpg)
-
+# **Pengertian Peluang**
 ]
 
+##Pada hakekatnya, dasar perumusan tentang peluang atau penentuan ukuran yang dapat mengukur tingkat kepastian timbulnya suatu kejadian dapat dibedakan dalam 3 cara 
+
+- ##Perumusan Peluang Klasik
+- ##Perumusan Peluang secara Frekuensi Relatif
+- ##Perumusan Peluang secara Subyektif
 
 ---
 
-.pull-left[
+.pull.center[
+# **Pengertian Peluang**
+]
 
-**Contoh 7**
+###.red[Peluang Klasik] : Jika suatu percobaan dapat menghasilkan `\(N\)` titik contoh yang saling berpeluang sama, dan jika tepat ada sebanyak `\(n\)` dari titik contoh tersebut merupakan unsur dari kejadian `\(A\)`, maka peluang kejadian `\(A\)` adalah `\(P(A) = n/N\)` (Asumsi : setiap titik contoh memiliki peluang muncul yang sama)
 
-Buatlah statistik 5 serangkai untuk data pada **Soal 6** menggunakan kuartil metode belah dua.
+--
 
-*Penyelesaian*
+### .red[Peluang Frekuensi Relatif] : Misalkan `\(S\)` adalah suatu ruang contoh, `\(A\)` adalah suatu kejadian, dan n(A) adalah frekuensi munculnya kejadian `\(A\)` jika percobaan diulang sebanyak `\(n\)` kali. Peluang kejadian `\(A\)` adalah : `\(P(A) = n(A)/n\)`
 
-&lt;br&gt;&lt;br&gt;
+--
+###.red[Peluang secara Subyektif] : bergantung pada keyakinan subyektif masing-masing
 
+---
+
+.pull.center[
 ![](gb_04.jpg)
 ]
 
+---
+
+- ## Percobaan (_experiment_)
+   Suatu aktivitas atau kegiatan yang memberikan hasil yang acak. Misalnya: Melempar sebuah dadu sisi 6 satu kali.
+- ## Hasil (_outcome_)
+  Hasil yang mungkin dari suatu percobaan. Himpunan semua hasil yang mungkin dari suatu percobaan disebut Ruang Contoh (Ruang Sampel). Ruang contoh biasa dinotasikan dengan huruf `\(S\)` dan banyaknya anggota `\(S\)` dinotasikan dengan `\(n(S)\)`. Pada pelemparan sebuah dadu sisi 6, maka ruang contohnya adalah `\(S=\{1, 2, 3, 4, 5, 6\}\)` dengan `\(n(S)=6\)`.
+- ## Kejadian (_event_)
+  Himpunan bagian dari ruang contoh yang memiliki karkteristik tertentu. Kejadian dinotasikan dengan huruf kapital, misalkan kejadian `\(A\)` adalah terpilihnya sisi dadu genap. Maka `\(A=\{2,4,6\}\)` dengan banyaknya anggota `\(A\)` adalah `\(n(A)=3\)`.
+
+---
+
+- ## Percobaan
+  ### Melempar sebuah mata uang logam dua kali.
+- ## Ruang Contoh
+  ### Jika sebuah mata uang logam terdiri atas sisi angka `\((A)\)` dan sisi gambar `\((G)\)`, maka `\(S=\{AA, AG, GA, GG \}\)`
+- ## Ruang Kejadian
+  ### Misalkan `\(B\)` adalah kejadian munculnya dua sisi yang sama, maka `\(B=\{AA, GG \}\)`
+
+---
+
+background-image: url("gb_05.jpg")
+
+---
+
+background-image: url("gb_06.jpg")
+
+---
+
+class: middle, center
+
+# Berapa banyak anggota ruang contoh jika pertanyaan pada Pop Quiz di atas terdiri atas .red[**5 pertanyaan**], .red[**10 pertanyaan**], atau .red[**20 pertanyaan**]?
+
+---
+
+.pull.center[
+#**.red[Permasalahan]**
+]
+
+- ## Tidak semua kasus dapat dibuat dalam bentuk diagram dengan mudah.
+
 --
 
-.pull-right[**Contoh 8**
+- ## Menghitung banyaknya kemungkinan bisa menggunakan:
+  - ### Kaidah Penggandaan
+  - ### Kaidah Penjumlahan
+  - ### Permutasi
+  - ### Kombinasi
+---
 
-Buatlah statistik 5 serangkai untuk data &lt;br&gt;pada **Soal 6** menggunakan interpolasi.
-
-*Penyelesaian*
-
-&lt;br&gt;&lt;br&gt;
-
-![](gb_05.jpg)
-
+.pull.center[
+#**Faktorial**
 ]
+
+- ## Jika `\(n\)` adalah bilangan bulat positif, maka `$$\begin{align*}n!&amp;=n \times (n-1) \times (n-2) \times \dots \times 3 \times 2 \times 1 \\ n!&amp;=n \times (n-1)! \end{align*}$$`
+
+- ## Jika `\(n=0\)`, maka `\(0!=1\)`
+- ## Contoh: `\(4!=4\times3\times2\times1=24\)`
+---
+
+.pull.center[
+#**Kaidah Penggandaan**
+]
+
+###Jika operasi ke-1 dapat dilakukan dengan `\(n_1\)` cara dan setiap cara operasi ke-1 dilanjutkan dengan operasi ke-2 yang dapat dilakukan dengan `\(n_2\)` cara dan setiap cara operasi ke-2 dilanjutkan lagi dengan operasi ke-3 yang dapat dilakukan dengan `\(n_3\)` cara dan seterusnya sampai sederetan `\(k\)` buah operasi, maka semua operasi tersebut dapat dikerjakan secara bersama-sama dengan `\(n_1 \times n_2 \times n_3 \times \dots \times n_k\)` cara.
+
+###.red[**Contoh 20-1**] 
+### Percobaan melemparkan sebuah uang logam 10 kali. Banyaknya ruang contoh adalah `$$n(S)=2\times 2\times 2\times 2\times 2\times 2\times 2\times 2\times 2\times 2 = 1024$$`
+---
+
+.pull.center[
+#**Kaidah Penjumlahan**
+]
+
+### Jika suatu operasi dapat diselesaikan dengan `\(k\)` buah alternatif; alternatif ke-1 dapat dilakukan dengan `\(n_1\)` cara, alternatif ke-2 dengan `\(n_2\)` cara, dan seterusnya hingga alternatif ke-k dengan `\(n_k\)` cara, maka operasi tersebut dapat dilakukan dengan `\(n_1 + n_2 + \dots + n_k\)` cara.
+
+### .red[**Contoh 21-1**]
+### Dari Kota A ke Kota B bisa ditempuh melalui 3 jalan. Dari Kota B ke Kota D bisa ditempuh melalui 2 jalan. Dari Kota A ke Kota D bisa ditempuh melalui 4 jalan. Banyaknya jalan yang bisa dilalui jika ingin bepergian dari Kota A ke Kota D adalah
+### `$$ABD + AD=AB \times BD + BD=3 \times 2 + 4 = 10$$`
 
 ---
 
 .pull.center[
-# **Modus**
+#**Permutasi**
 ]
 
-## Nilai data yang paling sering terjadi (frekuensi paling tinggi)
+###Berapa banyak susunan yang berbeda dapat dibentuk dari huruf A, B, dan C ?
+Semua kemungkinan susunannya adalah: ABC, ACB, BAC, BCA, CAB, CBA. Jumlah susunan yang berbeda sebanyak 6. Susunan ini disebut dengan .red[**permutasi**].
 
-- ### Dalam satu gugus data dapat mengandung lebih dari satu modus
-- ### Dapat digunakan untuk semua jenis data, tapi paling banyak digunakan untuk data kategorik atau data diskret dengan hanya sedikit nilai yang mungkin muncul
+### .red[**Permutasi**] adalah cara menyusun objek di mana urutan/susunan objek terpilih .red[**diperhatikan**].
+
+ Hasil di atas dapat juga diperoleh dengan menggunakan prinsip penggandaan, yaitu:
+- objek pertama dari permutasi ada 3 kemungkinan
+- objek kedua dapat dipilih dari sisanya yaitu 2
+- objek ketiga dari permutasi diperoleh dari sisanya yaitu 1.
+Sehingga terdapat 3 × 2 × 1 = 6 permutasi
+
+### Permutasi dari `\(n\)` objek yang berbeda adalah `$$n \times (n-1) \times \dots \times 3 \times 2 \times 1 = n!$$`
 
 ---
 
 .pull.center[
-# **Modus**
+#**Permutasi**
 ]
+
+###Bila dari huruf A, B, dan C dipilih dua secara acak dan diperhatikan susunannya. Kemungkinan susunannya adalah: AB, AC, BC, BA, CB, CA. Jumlah susunan yang berbeda `\(3 \times 2 = 6\)` permutasi.
+
+### Secara umum bila terdapat `\(n\)` objek yang berbeda dan diambil secara acak `\(r\)` objek, maka banyaknya permutasi adalah: `$$nPr=\dfrac{n!}{(n-r)!}$$`
+
+---
+
+.pull.center[
+#**Kombinasi**
+]
+
+- Pada permutasi susunan/urutan benda diperhatikan. Kita sering tertarik hanya dalam penentuan banyaknya grup yang beranggotakan `\(r\)` objek yang dapat dibentuk dari `\(n\)` objek.&lt;br&gt;&lt;br&gt;
+- Sebagai contoh, berapa banyaknya grup beranggota 3 yang dipilih dari 5 obyek `\(A\)`, `\(B\)`, `\(C\)`, `\(D\)`, dan `\(E\)`? &lt;br&gt;&lt;br&gt;
+- Untuk menjawabnya perhatikan uraian ini, karena ada 5 cara memilih objek yang pertama, berikutnya ada 4 cara, dan 3 cara untuk memilih obyek ketiga. Sehingga ada 5 × 4 × 3 kemungkinan susunan. &lt;br&gt;&lt;br&gt;
+- Akan tetapi, perhatikan pada setiap grup tersebut, misalkan objek yang terpilih `\(A\)`, `\(B\)`, `\(C\)`, dihitung 6 kali (yaitu semua permutasi: `\(ABC\)`, `\(ACB\)`, `\(BAC\)`, `\(BCA\)`, `\(CAB\)`, `\(CBA\)`). Sehingga banyaknya grup yang terbantuk adalah
+
+`$$\dfrac{5 \times 4 \times 3}{3 \times 2 \times 1}=10$$`
+- Pemilihan obyek tanpa memperhatikan urutan disebut **kombinasi**.
+
+---
+
+.pull.center[
+#**Kombinasi**
+]
+
+### .red[**Kombinasi**] adalah cara menyusun objek di mana urutan/susunan objek terpilih .red[**tidak diperhatikan**].
+
+### Secara umum bila ada `\(n\)` objek yang berbeda, kemudian dipilih secara acak grup beranggotakan `\(r\)` objek, maka banyaknya susunan adalah `\(nPr\)` di mana setiap grup akan dihitung sebanyak `\(r!\)` kali. Sehingga banyaknya grup beranggotakan `\(r\)` objek yang dapat dibentuk dari `\(n\)` objek yang berbeda adalah `$$\dfrac{nPr}{r!}=\dfrac{1}{r!}\dfrac{n!}{(n-r)!}=\dfrac{n!}{r!(n-r)!}$$`
+
+### Notasi untuk kombinasi adalah `\(nCr={n \choose x}= \dfrac{n!}{r!(n-r)!}\)` untuk `\(r \leq n\)`
+
+---
 
 .pull-left[
-![](gb_06.jpg)
+.red[**Soal 26-1**]
+
+From `\(A\)` to `\(D\)` could be reached through `\(B\)` or `\(C\)`. There are 3 routes from `\(A\)` to `\(B\)`, 4 routes from `\(B\)` to `\(D\)`. There are 4 routes from `\(A\)` to `\(C\)` and 5 routes from `\(C\)` to `\(D\)`. Ani travel from `\(A\)` to `\(D\)` and return to `\(A\)`. How many possible routes for Ani to do her traveling if she can’t through the same route
+___
+
+.red[**Soal 26-2**]
+
+Three student from your class are going to be chosen as President, Vice President, and Secretary of class commitee. How many arrangement can be made?
+___
+
+.red[**Soal 26-3**]
+
+Three student from your class are going to be chosen as lecturer assistant. How many students arrangement can be made?
+
+
 ]
 
---
-
 .pull-right[
-
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-## Tentukan .red[**modus**] dari data di samping.
+.red[**Soal 26-4**]
+
+A box contains of three digits number constructed from 9, 8, 7, 6, 5, and 4. A number is taken from the box. An event `\(A\)` stated as the selected number is more than 700.
+1.	What is the TRIAL (experiment) for this case.
+1.	How many sample space for this case.
+1.	How many members of `\(A\)`.
+___
+
+.red[**Soal 26-5**]
+
+Three balls are taken from a box contains 6 red balls and 4 green balls.
+1.	What is the TRIAL (experiment) for this case
+1.	How many sample space for this case
+1.	If an event `\(M\)` stated as the selected balls are 2 reds and 1 green, how many members of `\(M\)`.
+
+
 ]
 
 ---
 
 .pull.center[
-# **Modus**
+#**Peluang Suatu Kejadian**
 ]
 
+### Pendekatan klasik terhadap penentuan nilai peluang diberikan dengan menggunakan nilai frekuensi relatif.
+
+###Andaikan dilakukan percobaan sebanyak `\(N\)` kali, dan kejadian `\(A\)` terjadi sebanyak `\(n \le N\)` kali maka peluang `\(A\)` didefinisikan sebagai `\(P(A) = n/N\)`
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+###Hukum Bilangan Besar: `\(P(A) \approx \dfrac{m}{n}\)`
+Jika suatu proses atau percobaan diulang sampai beberapa `\(n\)` kali (**dalam jumlah besar**), dan jika karakteristik `\(A\)` muncul `\(m\)` kali maka frekuensi relatif dari `\(A\)`, `\(m/n\)`, akan mendekati peluang dari `\(A\)`
+]
+
+---
+
+.pull.center[
+#**Law of Large Number**
+]
 .pull-left[
 
-### In the 2008 General Social Survey, 2020 respondents answered the question, “How many children have you ever had?” The results were
-
-|# Children|0|1|2|3|4|5|6|7|8+|
-|---|
-|Count|521|323|524|344|160|77|30|19|22|
-
-]
-
---
-
-.pull-right[
-
+Berikut adalah simulasi pelemparan dadu sebanyak 10.000 kali
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-## Tentukan .red[**modus**] dari data di samping.
+
+![](gb_07.png)
+]
+
+.pull-right[
+
+Misalnya kita tertarik dengan kejadian `\(A\)`, yaitu munculnya mata dadu sisi 6 pada percobaan ini. 
+
+Dari grafik di samping terlihat bahwa semakin banyak jumlah lemparan, frekuensi kumulatifnya cenderung konstan ke satu nilai.
+
+Dari 10.000 lemparan diperoleh munculnya sisi 6 sebanyak 1.650 kali. Sehingga frekuensi relatif munculnya mata dadu sisi 6 akan mendekati nilai peluang teoritis kejadian `\(A\)`. `$$\dfrac{1.650}{10.000}=0.1650 \approx \dfrac{1}{6}=0.1666667$$`
+
 ]
 
 ---
 
-.pull.center[
-# **Hubungan Mean, Median, dan Modus**#
-
-
-![](gb_08.jpg)
-
-]
-
---
 
 .pull.center[
-## Di manakan .red[**posisi Modus**]?
+#**Aksioma Peluang**
 ]
+
+##Beberapa kaidah sebaran peluang, yaitu:
+1. ### `\(0 \le P(x_i) \le 1\)` untuk `\(i=1,2, \dots, n\)`
+1. ### Jumlah peluang seluruh kejadian dalam ruang contoh adalah 1 `$$\sum{P(x_i)}=1$$`
+1. ### `\(P(A_1 \cup A_2 \cup \dots \cup A_m) = P(A_1)+P(A_2)+\dots+P(A_m)\)`, jika `\(A_1, A_2, \dots, A_m\)` merupakan kejadian-kejadian yang saling lepas (_mutually exclusive_).
 
 ---
 
 .pull.center[
-# **Peringkasan Data**
+#**Aksioma Peluang**
+]
+
+Pada banyak kasus atau eksperimen, adalah wajar untuk mengasumsikan bahwa setiap anggota dari ruang contoh memiliki peluang yang sama untuk terjadi atau terpilih. Misalkan sebuah eksperimen dengan ruang contoh `\(S\)` berhingga: `\(S=\{x_1,x_2,x_3, \dots , x_N\}\)`, maka 
+### `$$P(x_1)=P(x_2)=P(x_3)=\dots=P(x_n)=\dfrac{1}{N}$$`
+
+di mana `\(i=1,2,3,\dots,N\)`
+
+Untuk setiap kejadian `\(A \in S\)` dan berdasarkan aksioma 2 dan 3, maka 
+### `$$P(A)=\dfrac{\text{banyaknya anggota kejadian A}}{\text{banyaknya anggota ruang contoh S}}=\dfrac{n(A)}{n(S)}$$`
+
+---
+
+.pull.center[
+#**Peluang Suatu Kejadian**
 ]
 
 .pull-left[
+.red[**Contoh 31-1**]
 
-# Ukuran Penyebaran Data
+Dua buah koin dilempar satu kali. Jika `\(A\)` menyatakan kejadian munculnya sisi gambar, tentukan peluang `\(A\)`.
+___
+**Eksperimen**: Melempar dua buah kon satu kali.
+**Ruang contoh**: `\(S=\{AA,AG,GA,GG\}\)`
+**Kejadian `\(A\)`**: Munculnya sisi gambar&lt;br&gt;
+**Ruang kejadian `\(A\)`**: `\(A=\{AG,GA,GG\}\)`
 
-## Gambaran seberapa besar data menyebar dalam kumpulannya
+Banyaknya ruang contoh: `\(n(S)=4\)`&lt;br&gt;
+Banyaknya ruang kejadian `\(A\)`: `\(n(A)=3\)`
+
+Peluang munculnya sisi gambar adalah `$$P(A)=\dfrac{n(A)}{n(S)}=\dfrac{3}{4}=0.75$$`
 
 ]
 
@@ -649,612 +479,486 @@ Buatlah statistik 5 serangkai untuk data &lt;br&gt;pada **Soal 6** menggunakan i
 
 .pull-right[
 
-## Jenis ukuran penyebaran data
+.red[**Contoh 31-2**]
 
-1. ## Jangkauan (*range*)
-1. ## Jangkauan Antar Kuartil
-1. ## Ragam (*variance*)
-1. ## Simpangan Baku (*standard deviation*)
+Dalam satu komite terdiri dari 5 laki-laki dan 4
+perempuan akan dipilih 3 orang yang akan mewakili komite dalam munas. Tentukan peluang yang terpilih menjadi wakil adalah 2 orang laki-laki dan 1 orang perempuan.
+___
+**Eksperimen**: memilih 3 orang wakil dari 5 laki-laki dan 4 perempuan, maka `\(n(S)={9 \choose 3}=84\)`
+
+Misal `\(A\)` adalah terpilihnya 2 laki-laki dan 1 perempuan, maka `\(n(A)={5 \choose 2}{4 \choose 1}=10(4)=40\)`
+
+`\(P(A)=\dfrac{n(A)}{n(S)}=\dfrac{40}{84}=\dfrac{10}{21}\)`
 ]
 
 ---
 
-.pull.center[
-# Ukuran Penyebaran Data
-]
---
-.pull.center[
-### .red[**Mengapa diperlukan ukuran penyebaran?**]
-]
-
---
-.pull.center[
-![](gb_09.jpg)
-]
----
-
-.pull.center[
-# Ukuran Penyebaran Data
-]
 .pull-left[
-## Jangkauan (*range*)
 
-### Selisih pengamatan terbesar dengan pengamatan terkecil
-### `\(R=X_{max}-X_{min}\)`
-- Hanya memperhitungkan nilai terkecil dan terbesar, sedangkan sebaran
-nilai antara dua nilai tersebut tidak diperhitungkan
-- Resisten terhadap nilai yang ekstrim
+.red[**Soal 32-1**]
+
+Dua dadu dilempar undi bersama-sama satu kali. Tentukan peluang jumlah mata kedua dadu yang muncul habis dibagi 5.
+___
+
+.red[**Soal 32-2**]
+
+Sebuah koin dilempar 3 kali. Tentukan peluang munculnya dua sisi angka.
+___
+
+.red[**Soal 32-3**]
+
+A box contains of three digits number constructed from 9, 8, 7, 6, 5, and 4. A number is taken from the box. An event `\(A\)` stated as the selected number is more than 700. Determine the probability of `\(A\)`.
+___
+
+.red[**Soal 32-4**]
+
+A box contains of three digits number constructed from 9, 8, 7, 6, 5, and 4. A number is taken from the box. An event `\(A\)` stated as the selected number is more than 700. Determine the probability of `\(A\)`.
+
 
 ]
-
---
 
 .pull-right[
 
-## Jangkauan Antar Kuartil
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.red[**Soal 32-5**]
 
-### Selisih antara kuartil 3 dengan kuartil 1
-### `\(JAK=Q_3-Q_1\)`
+A couple plans on having three children. Suppose that the probability of any given child being female is 0.5.
+1. Write out all outcomes in the sample space for the genders of the three children.
+1. What should be the probability associated with each outcome?
+1. Find the probability that the couple will have two girls and one boy.
+1. Find the probability that the couple will have at least one child of each gender.
 
-- Memperhitungkan sebaran antara nilai minimum dan nilai maksimum
-- Kekar terhadap adanya nilai-nilai yang ekstrim (pencilan)
+___
+
+.red[**Soal 32-6**]
+
+A local downtown arts and crafts shop found from past observation that 20% of the people
+who enter the shop actually buy something. Three potential customers enter the shop. Find the probability of at least one sale to the three customers.
+
 ]
 
 ---
 
-.pull-left[
-**Contoh 9**
+.pull.center[
+#**Peluang Dua Kejadian**
+]
 
-Investigation was conducted to investigate the sodium level
-in 20 breakfast cereals The observations (in mg) are
+.pull-left[
+
+### .red[**Komplemen dari sebuah kejadian**]
+
+Komplemen dari kejadian `\(A\)` dinyatakan sebagai `\(A^c\)`. `\(A^c\)` adalah kejadian di mana anggotanya adalah seluruh anggota ruang sampel yang bukan `\(A\)`.
+
+`$$A \cup A^c=S \Leftrightarrow P(A \cup A^c)=P(S)$$`
+Karena `\(A\)` dan `\(A^c\)` saling lepas, maka berdasarkan Aksioma 2 dan 3 diperoleh
+
+$$
+`\begin{align*}
+P(A \cup A^c)&amp;=P(S) \\
+P(A)+P(A^c)&amp;=1 \\
+P(A^c)&amp;=1-P(A)
+\end{align*}`
+$$
+]
+
+.pull-right[
 
 ![](gb_07.jpg)
 
-1. Figure out the median, `\(Q_1\)`, `\(Q_2\)`, and `\(Q_3\)` of the data
-1. Figure out the range and interquartile range of the data
-1. Construct Five-Number Summary of the data (Statistik 5 Serangkai)
+Diketahui `\(S=\{1,2,3,4,5\}\)` dan `\(A=\{1,2,3\}\)`, maka `\(A^c=\{4,5\}\)`. Dengan demikian `$$P(A)+P(A^c)=\dfrac{3}{5}+\dfrac{2}{5}=1$$`
+]
+
+---
+
+.pull.center[
+#**Peluang Dua Kejadian**
+]
+
+.pull-left[
+
+### .red[**Gabungan Dua Kejadian**]
+
+Gabungan (_union_) kejadian `\(A\)` dan `\(B\)` ditulis `\(A \cup B\)` (dibaca `\(A\)` gabung `\(B\)`) adalah kejadian yang anggotanya merupakan anggota kejadian `\(A\)` saja, anggota kejadian `\(B\)` saja, atau yang menjadi anggota kejadian `\(A\)` dan `\(B\)` sekaligus. 
 
 
-*Penyelesaian*
+### .red[**Irisan Dua Kejadian**]
 
-Data setelah diurutkan dari terkecil ke terbesar
+Irisan (_intersection_) kejadian `\(A\)` dan `\(B\)` ditulis `\(A \cap B\)` (dibaca `\(A\)` irisan `\(B\)`) adalah kejadian yang anggotanya merupakan anggota kejadian `\(A\)` dan `\(B\)` sekaligus.
+]
 
-| `\(X_1\)` | `\(X_2\)` | `\(X_3\)` | `\(X_4\)` | `\(X_5\)` | `\(X_6\)` | `\(X_7\)` | `\(X_8\)` | `\(X_9\)` | `\(X_{10}\)` |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|0 |50 |70 |100 |130 |140 |140 |150 |160 |180|
-| `\(X_{11}\)` | `\(X_{12}\)` | `\(X_{13}\)` | `\(X_{14}\)` | `\(X_{15}\)` | `\(X_{16}\)` | `\(X_{17}\)` | `\(X_{18}\)` | `\(X_{19}\)` | `\(X_{20}\)` |
-|180 |180 |190 |200 |200 |210 |210 |220 |290 |340|
+.pull-right[
+
+![](gb_09.png)
+
+Berdasarkan ilustrasi di atas, maka 
+`$$\begin{align*}
+A \cup B&amp;=A+B-A \cap B \\
+P(A \cup B)&amp;=P(A)+P(B)-P(A \cap B)
+\end{align*}$$`
+
+atau `$$P(A \cap B)=P(A)+P(B)-P(A \cup B)$$`
 
 ]
 
---
+---
+
+.pull.center[
+#**Peluang Dua Kejadian**
+]
+
+.pull-left[
+
+.red[**Contoh 35-1**]
+
+Sebuah uang logam dilempar dua kali. Kejadian `\(A\)` menyatakan kejadian munculnya dua sisi yang sama. Kejadian `\(B\)` adalah munculnya sisi angka. Tentukan `\(P(A)\)`, `\(P(B)\)`, `\(P(A \cap B)\)`, dan `\(P(A \cup B)\)`.
+___
+`\(S=\{AA, AG, GA, GG\} \Leftrightarrow n(S)=4\)`&lt;br&gt;
+`\(A=\{AA, GG\} \Leftrightarrow n(A)=2\)`&lt;br&gt;
+`\(B=\{AA, AG, GA\} \Leftrightarrow n(B)=3\)`&lt;br&gt;
+`\(A \cap B=\{AA\} \Leftrightarrow n(A \cap B)=1\)`&lt;br&gt;
+`\(A \cup B=\{AA, AG, GA, GG\} \Leftrightarrow n(A \cap B)=4\)`
+
+`\(P(A)=\dfrac{2}{4} \hspace{2cm} P(B)=\dfrac{3}{4}\)`&lt;br&gt;
+`\(P(A \cap B)=\dfrac{1}{4} \hspace{2cm} P(A \cup B)=\dfrac{4}{4}=1\)`
+
+
+]
 
 .pull-right[
+
+.red[**Contoh 35-2**]
+
+![](gb_10.png)
+Tabel di atas adalah data Education dan Income Category dari 6.400 responden. Salah seorang responden dipilih secara acak. Misalkan `\(A\)`
+adalah kejadian terpilihnya responden dengan Income Category Upper. `\(B\)` adalah kejadian terpilihnya responden dengan Education SMA. Tentukan `\(P(A \cap B)\)` dan `\(P(A \cup B)\)`.
+
+]
+
+---
+
+.pull.center[
+#**Peluang Dua Kejadian**
+]
+
+.pull-left[
+###.red[**Kejadian Saling Lepas (Mutually Exclusive)**]
+
+Kejadian `\(A\)` dan `\(B\)` dikatakan saling lepas jika `\(A\)` dan `\(B\)` tidak beririsan. Dapat juga dikatakan bahwa anggota kejadian `\(A\)` tidak ada di `\(B\)` dan anggota kejadian `\(B\)` tidak ada di `\(A\)`. Karena `\(A\)` dan `\(B\)` saling lepas, maka `\(P(A \cap B)=0\)`
+
+
+
+
+![](gb_11.png)
+]
+
+.pull-right[
+
+### .red[**Kejadian Saling Bebas (Independet Event)**]
+
+Kejadian `\(A\)` dan `\(B\)` dikatakan saling bebas jika terjadinya kejadian `\(A\)` tidak mempengaruhi atau dipengaruhi oleh kejadian `\(B\)` dan sebaliknya. `$$P(A \cap B)=P(A)P(B)$$`
+
+.red[**Contoh 36-1**]
+
+Peluang bayi lahir berjenis kelamin laki-laki diketahui 0.6.
+Jika jenis kelamin anak pertama (A) dan kedua (B) saling bebas, berapa peluang jenis kelamin anak pertama dan anak kedua laki-laki?
+___
+`\(P(A \cap B)=P(A)P(B)=0.6(0.6)=0.36\)`
+
+
+]
+
+---
+
+.pull.center[
+#**Peluang Dua Kejadian**
+]
+
+.pull-left[
+###.red[**Peluang Bersyarat**]
+
+Peluang bersyarat terjadinya kejadian `\(A\)` diketahui bahwa kejadian `\(B\)` telah terjadi dinotasikan sebagai `\(P(A|B)\)`. 
+
+`$$P(A|B)=\dfrac{P(A \cap B)}{P(B)}$$`
+Jika `\(A\)` dan `\(B\)` .red[**saling bebas**], maka
+
+`$$P(A|B)=\dfrac{P(A \cap B)}{P(B)}=\dfrac{P(A)P(B)}{P(B)}=P(A)$$`
+]
+
+.pull-right[
+
+`$$P(B|A)=\dfrac{P(A \cap B)}{P(A)}=\dfrac{P(A)P(B)}{P(A)}=P(B)$$`
 &lt;br&gt;&lt;br&gt;
-- Median
-  
-  Banyaknya data adalah `\(n=20\)` (genap), maka `\(Q_2=\dfrac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}=\dfrac{180+180}{2}=180\)`
-- `\(Q_1\)` dan `\(Q_3\)`
+![](gb_12.png)
 
-  Karena banyaknya data adalah **genap**, data terurut bisa langsung dibagi menjadi dua kelompok.
-  
-  `\(\underbrace{X_1 \hspace{1cm}...\hspace{1cm}{X_{10}}}_{\text{Kelompok 1}} \hspace{1cm}\underbrace{X_{11} \hspace{1cm}...\hspace{1cm}{X_{20}}}_{\text{Kelompok 2}}\)`
-  
-  ......_**silakan dilanjutkan**_.....
-- Jangkauan
-- Jangkauan Antar Kuartil
-- Statistik 5 Serangkai
+
 ]
 
 ---
 
-.pull.center[
-# **Ragam (Variansi)**
-]
-
 .pull-left[
+.red[**Contoh 38-1**]
 
-### Jumlah kuadrat selisih antara setiap observasi dengan pusatnya (rata-rata)
+_Triple Blood Test_ digunakan untuk mendeteksi apakah wanita yang hamil akan melahirkan bayi _Down Syondrome_. Resiko melahirkan bayi Down Syundrome meningkat setelah Wanita berusia di atas 35 tahun. Studi dilakukan kepada 5.282 orang dan diperoleh hasil seperti berikut.
 
-|No| `\(X\)` | `\(X-\mu\)` | `\((X-\mu)^2\)`|
-|:-:|:-:|:-:|:-:|
-|1|4|-2|4|
-|2|5|-1|1|
-|3|6|0|0|
-|4|7|1|1|
-|5|8|2|4|
-| Rata-rata |6| 0 |2|
-
+![](gb_13.png)
+&lt;br&gt;&lt;br&gt;
+Jika 5.282 orang tersebut dianggap representatif mewakili populasi, tentukan:
+1. Peluang hasil tes seorang wanita hamil di atas 35 tahun adalah positif.
+1. Jika hasil tes seseorang adalah positif, tentukan peluang bayi yang dikandungnya benar-benar mengalami Down Syndrome.
 ]
 
 .pull-right[
-
-- ### `\(X-\mu\)` &lt;br&gt;adalah .red[simpangan] (deviasi): selisih dari data terhadap rataannya
-
-- ### Rata-rata `\((X-\mu)^2=2\)` &lt;br&gt; adalah .red[ragam] (variansi): jumlah kuadrat dari deviasi di sekitar rataannya
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+1. Misalkan `\(A\)` menyatakan kejadian hasil tes seorang wanita hamil di atas 35 tahun adalah positif.&lt;br&gt;
+  `\(n(A)=1355 \hspace{2cm} n(S)=5282\)`&lt;br&gt;
+  `\(P(A)=\dfrac{1355}{5282}=0.257\)`
+1. Misalkan `\(C\)` menyatakan kejadian hasil tes seseorang adalah positif dan `\(D\)` adalah kejadian bayi yang di kandung benar-benar mengalami Down Syndrome, maka
+`$$\begin{align*}
+P(D|C)&amp;=\dfrac{P(D \cap C)}{P(C)}=\dfrac{48/5282}{1355/5282} \\
+&amp;=\dfrac{48}{1355}=0.035
+\end{align*}$$`
 ]
 
 ---
 
-.pull.center[
-# **Ragam (variansi)**
-]
-
 .pull-left[
-### Diketahui sekumpulan data berukuran `\(N\)` dari sebuah populasi
-### `$$x_1, x_2, x_3, ..., x_N$$`
-### dengan rata-rata `\(\mu\)`. Dari populasi tersebut diambil contoh (sampel) berukuran `\(n\)` `\((n&lt;N)\)`
-### `$$x_1, x_2, x_3, ..., x_n$$`
-### dengan rata-rata `\(\bar{x}\)`
-]
 
---
+.red[**Contoh 39-1**]
 
-.pull-right[
-
-### .blue[**Ragam Populasi**] `\(\rightarrow{\text{parameter}}\)`
-
-### `$$\sigma^2=\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}$$`
-
-### .blue[**Ragam Contoh**] `\(\rightarrow{\text{statistik}}\)`
-
-### `$$s^2=\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}$$`
-]
-
----
-
-.pull.center[
-# **Simpangan Baku (Standard Deviation)**
-
-.pull.left[
-### Akar kuadrat dari ragam. Ragam merupakan ukuran jarak kuadrat, sehingga untuk mendapatkan jarak yang sebenarnya adalah dengan mengakarkan ragam.
-]
-]
-
-.pull-left[
-### Simpangan baku Populasi
-### `$$\underbrace{\sigma=\sqrt{\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}}}_{\text{parameter}}$$`
-]
-
-.pull-right[
-### Simpangan baku Contoh
-### `$$\underbrace{s=\sqrt{\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}}}_{\text{statistik}}$$`
-]
-
----
-.pull-left[
-**Contoh 10**
-
-Diketahui kumpulan data berikut
-
-`$$50 \hspace{1cm}60 \hspace{1cm}70 \hspace{1cm}80 \hspace{1cm}90$$`
-Tentukan.
-1. Ragam dan simpangan baku populasi jika data di atas dianggap sebagai data seluruh populasi
-1. Ragam dan simpangan baku sampel jika data di atas dianggap sebagai data sampel
-
-_Penyelesaian_
-
-1. **Populasi**&lt;br&gt;
-  Diketahui banyaknya anggota populasi `\(N=5\)`, maka
-  `$$\mu=\dfrac{50+60+70+80+90}{5}=70$$`
-   
-
-
-]
-
---
-
-.pull-right[
+Dalam sebuah kotak berisi 2 bola .red[**merah**] dan 3 bola .blue[**biru**]. Jika diambil dua buah bola satu persatu **tanpa pengembalian**. Berapakah peluang bola kedua berwarna merah `\((M_2)\)` jika pada pengambilan pertama diketahui berwarna biru `\((B_1)\)`.
+___
 &lt;br&gt;
-  ragam populasi
-`$$\begin{align*}
-  \sigma^2&amp;=\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}\\
-  &amp;=\dfrac{(50-70)^2+(60-70)^2+...+(90-70)^2}{5}\\
-  &amp;=\dfrac{1000}{5}=200
-  \end{align*}$$`
-  
-  simpangan baku populasi
-  
-  `\(\sigma=\sqrt{\sigma^2}=\sqrt{200}=14.14\)`
-  
-2.** Sampel**
-  &lt;br&gt;Karena data sampel sama dengan data &lt;br&gt;populasi, maka `\(n=5\)` dan `\(\bar{x}=70\)`, sehingga
-`$$\begin{align*}
-s^2&amp;=\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}=\dfrac{1000}{4}=250\\
-s&amp;=\sqrt{250}=15.81
-\end{align*}$$`
-]
----
 
-.pull.center[
-# **Diagram Kotak Garis (Box Plot)**
+|Pengambilan ke-1|Pengambilan ke-2|
+|:-:            |:-:              |
+| `\(P(B_1)=\dfrac{3}{5}\)` | `\(P(B_2)=\dfrac{2}{4}\)` |
+| `\(P(M_1)=\dfrac{2}{5}\)` | `\(P(M_2)=\dfrac{2}{4}\)` |
+
+&lt;br&gt;
+`$$P(M_2|B_1)=\dfrac{P(M_2 \cap B_1)}{P(B_1)}=\dfrac{1}{2}$$`
 ]
 
---
-
-## Diagram yang memvisualkan statistik 5 serangkai. Informasi yang diperoleh dari diagram kotak garis:
-
---
-- ###Melihat ukuran penyebaran dan ukuran pemusatan data
-
---
-- ###Melihat adanya data pencilan
-
---
-- ###Sebagai alat pembandingan sebaran dua kelompok data atau lebih
-
-
----
-
-.pull.center[
-# **Diagram Kotak Garis (Box Plot)**
-
-
-![](gb_10.jpg)
-]
-
-
----
-
-.pull.center[
-# **Langkah Pembuatan Box plot**
-]
-
-1. Hitung Statistik lima serangkai&lt;br&gt;&lt;br&gt;
-1. Hitung **Batas Atas** `\((BA)\)` `\(\rightarrow BA=Q_3 + 1.5(Q_3-Q_1)\)`&lt;br&gt;&lt;br&gt;
-1. Hitung **Batas Bawah** `\((BB)\)` `\(\rightarrow BB=Q_1 - 1.5(Q_3-Q_1)\)`&lt;br&gt;&lt;br&gt;
-1. Identifikasi data. Jika data `\(&lt; BB\)` atau data `\(&gt; BA\)` maka data dikatakan _outlier_ (pencilan)&lt;br&gt;&lt;br&gt;
-1. Gambar kotak dengan batas `\(Q_1\)` dan `\(Q_3\)`&lt;br&gt;&lt;br&gt;
-1. Jika tidak ada pencilan : Tarik garis dari `\(Q_1\)` sampai data terkecil dan tarik garis dari `\(Q_3\)` sampai data terbesar&lt;br&gt;&lt;br&gt;
-1. Jika ada pencilan : Tarik garis Q1 dan atau Q3 sampai data sebelum pencilan&lt;br&gt;&lt;br&gt;
-1. Pencilan digambarkan dengan **asterik**
-
----
-.pull-left[
-**Contoh 11**
-
-Investigation was conducted to investigate the sodium level
-in 20 breakfast cereals The observations (in mg) are
-
-![](gb_07.jpg)
-
-Construct a box plot for the cereal sodium level value.
-
-_Penyelesaian_
-
-Data pada soal ini adalah data yang sama dengan data pada **Contoh 9**. Berdasarkan hasil pada **Contoh 9** didapat nilai statistik 5 serangkai sebagai berikut:
-
-`\(x_{min}=0\)`, `\(x_{max}=340\)`, `\(Q_1=135\)`, `\(Q_2=180\)`, dan `\(Q_3=205\)` 
-
-]
-
---
 
 .pull-right[
 
-- Batas Atas: 
+&lt;br&gt;&lt;br&gt;
+
+.red[**Contoh 39-2**]
+
+Dalam sebuah kotak berisi 2 bola .red[**merah**] dan 3 bola .blue[**biru**]. Jika diambil dua buah bola satu persatu **dengan pengembalian**. Berapakah peluang bola kedua berwarna merah `\((M_2)\)` jika pada pengambilan pertama diketahui berwarna biru `\((B_1)\)`.
+___
+
+|Pengambilan ke-1|Pengambilan ke-2|
+|:-:            |:-:              |
+| `\(P(B_1)=\dfrac{3}{5}\)` | `\(P(B_2)=\dfrac{3}{5}\)` |
+| `\(P(M_1)=\dfrac{2}{5}\)` | `\(P(M_2)=\dfrac{2}{5}\)` |
+
+&lt;br&gt;
+`$$P(M_2|B_1)=\dfrac{P(M_2 \cap B_1)}{P(B_1)}=\dfrac{2}{5}$$`
+]
+
+
+---
+
+.pull.center[
+#**Teorema Bayes**
+]
+
+.pull-left[
+Peluang bersyarat dengan kondisi yang diketahui ialah kejadian kedua, sedangkan yang dicari ialah kejadian pertama.&lt;br&gt;
+Misalkan kejadian pertama adalah `\(A\)` dan kejadian kedua adalah `\(B\)` maka
 `$$\begin{align*}
-  BA&amp;=Q_3+1.5(Q_3-Q_1)\\
-  &amp;=205+1.5(205-135)\\
-  &amp;=205+105=310
-  \end{align*}$$`
-- Batas Bawah
-`$$BB=Q_1-1.5(Q_3-Q_1)=135-105=30$$`
-- Terdapat data di bawah BB, yaitu `\(0\)`. Dan data di atas BA, yaitu `\(340\)`. `\(0\)` dan `\(340\)` bisa dikatakan sebagai pencilan.
-
-![](gb_11.jpg)
-]
-
----
-
-.pull.center[
-# **Data Dikelompokkan**
-]
-
-.pull-left[
-
-Diketahui modal dari 40 perusahan (dalam milyar rupiah) berikut.
-
-|Modal    |Frekuensi|
-|:-:      |:-:      |
-|118 - 126|3        |
-|127 - 135|5        |
-|136 - 144|9        |
-|145 - 153|12       |
-|154 - 162|5        |
-|163 - 171|4        |
-|172 - 180|2        |
-|Jumlah   |40       |
-
-]
-
---
-
-.pull-right[
-
-- ###Berapa rata-rata modal perusahan-perusahaan tersebut?
-- ###Berapa kuartil 1 modal perusahan-perusahaan tersebut?
-- ###Tentukan modus dari modal perusahan-perusahaan tersebut?
-- ###.red[**Dapatkah kita menjawab pertanyaan-pertanyaan di atas dengan tepat?**]
-
-]
----
-
-.pull.center[
-# **Data Dikelompokkan**
-]
-
-.pull-left[
-
-Diketahui modal dari 40 perusahan (dalam milyar rupiah) berikut.
-
-|Modal    |Frekuensi|
-|:-:      |:-:      |
-|118 - 126|3        |
-|127 - 135|5        |
-|136 - 144|9        |
-|145 - 153|12       |
-|154 - 162|5        |
-|163 - 171|4        |
-|172 - 180|2        |
-|Jumlah   |40       |
-
-]
-
---
-
-.pull-right[
-
-- ###Jika data sudah disajikan dalam tabel data berkelompok dan kita tidak memiliki data asalnya, maka ukuran pemusatan data () dan ukuran penyebaran data () .red[**tidak dapat ditentukan dengan pasti**].
-- ###Ukuran pemusatan data dan ukuran penyebaran data .red[**hanya bisa ditentukan menggunakan perkiraan**].
-
-]
-
----
-
-.pull.center[
-# **Rata-rata**
-]
-
-.pull-left[
-
-Susun ulang tabel seperti berikut.
-
-|Modal    |Frek `\((f_i)\)`|Nilai Tengah `\((x_i)\)`| `\(f_ix_i\)` |
-|:-:      |:-:      |:-:  |:-:  |
-|118 - 126|3        |122  |366  |
-|127 - 135|5        |131  |655  |
-|136 - 144|9        |140  |1260 |
-|145 - 153|12       |149  |1788 |
-|154 - 162|5        |158  |790  |
-|163 - 171|4        |167  |668  |
-|172 - 180|2        |176  |352  |
-| `\(\sum\)`  |40       | `\(\sum\)` |5879 |
-
-]
-
---
-
-.pull-right[
-
-Perkiraan rata-rata untuk data berkelompok:
-`$$\begin{align*}
-\bar{x}&amp;=\dfrac{\sum{f_ix_i}}{\sum{f_i}}=\dfrac{5879}{40}=146.98
+B&amp;=(B \cap A) + (B \cap A^c) \\
+P(B)&amp;=P(B \cap A) + P(B \cap A^c) \\
+&amp;=P(B|A)P( A) + P(B|A^c)P(A^c)
 \end{align*}$$`
 
-Jadi, rata-rata modal dari 40 perusahaan tersebut diperkirakan sebesar `\(146.98\)` milyar rupiah.
-]
+![](gb_14.png)
 
----
 
-.pull.center[
-# **Ragam dan Simpangan Baku Populasi**
-]
 
-.pull-left[
-
-Susun ulang tabel seperti berikut.
-
-|Modal    | `\(f_i\)` | `\(d_i\)` | `\(d_i^2\)` | `\(f_id_i\)` | `\(f_id_i^2\)`  |
-|:-:      |:-:      |:-:|:-:|:-:  |:-:
-|118 - 126|3        |-3 |9  |-9   |27
-|127 - 135|5        |-2 |4  |-10  |20
-|136 - 144|9        |-1 |1  |-9   |9
-|145 - 153|12       |0  |0  |0    |0
-|154 - 162|5        |1  |1  |5    |5
-|163 - 171|4        |2  |4  |8    |16
-|172 - 180|2        |3  |9  |6    |18
-| `\(\sum\)`  |40       |   |28 |-9   |95
 
 ]
-
---
 
 .pull-right[
 
-Diketahui lebar kelas `\(c=9\)`, maka ragam
+Sehingga peluang bersyarat kejadian pertama `\((A)\)` diketahui kejadian kedua `\((B)\)` adalah
 `$$\begin{align*}
-\sigma^2&amp;=c^2 \left(\dfrac{\sum {f_id_i^2}}{N} - \left( \dfrac{\sum{f_id_i}}{N}\right)^2 \right) \\
-&amp;=9^2 \left(\dfrac{95}{40} - \left( \dfrac{-9}{40}\right)^2 \right)\\
-&amp;=188.27
+P(A|B)&amp;=\dfrac{P(A \cap B)}{P(B)} \\
+&amp;=\dfrac{P(B|A)P(A)}{P(B|A)P( A) + P(B|A^c)P(A^c)}
 \end{align*}$$`
 
-sehingga simpangan baku-nya
-
-`$$\sigma=\sqrt{\sigma^2}=\sqrt{188.27}=13.72$$`
 
 ]
-
-
 ---
-
-.pull.center[
-# **Ragam dan Simpangan Baku Sampel**
-]
 
 .pull-left[
 
-Susun ulang tabel seperti berikut.
+.red[**Contoh 41-1**]
 
-|Modal    | `\(f_i\)` | `\(d_i\)` | `\(d_i^2\)` | `\(f_id_i\)` | `\(f_id_i^2\)`  |
-|:-:      |:-:      |:-:|:-:|:-:  |:-:
-|118 - 126|3        |-3 |9  |-9   |27
-|127 - 135|5        |-2 |4  |-10  |20
-|136 - 144|9        |-1 |1  |-9   |9
-|145 - 153|12       |0  |0  |0    |0
-|154 - 162|5        |1  |1  |5    |5
-|163 - 171|4        |2  |4  |8    |16
-|172 - 180|2        |3  |9  |6    |18
-| `\(\sum\)`  |40       |   |28 |-9   |95
+Kota Bogor disebut kota hujan karena peluang terjadinya hujan `\((H)\)` cukup besar yaitu sebesar 0.6. Hal ini menyebabkan para mahasiswa harus siap-siap dengan membawa payung `\((P)\)`. Peluang seorang mahasiswa membawa payung jika hari hujan 0.8, sedangkan jika tidak hujan 0.4. &lt;br&gt;Berapa peluang hari akan hujan jika diketahui mahasiswa membawa payung?
+___
 
+Misalkan:&lt;br&gt;
+`\(H=\)` Bogor hujan&lt;br&gt;
+`\(P=\)` mahasiswa membawa payung&lt;br&gt;
+`\(P(H)=0.6 \hspace{2cm} P(TH)=1-0.6=0.4\)`&lt;br&gt;
+`\(P(P|H)=0.8 \hspace{2cm} P(P|TH)=0.4\)`
+
+Ditanyakan: `\(P(H|P)\)`
 ]
 
---
-
 .pull-right[
-
-Diketahui lebar kelas `\(c=9\)`, maka ragam
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 `$$\begin{align*}
-s^2&amp;=c^2 \left(\dfrac{\sum {f_id_i^2}}{n-1} - \left( \dfrac{\sum{f_id_i}}{n-1}\right)^2 \right) \\
-&amp;=\dots\\
-&amp;=\dots
+P(H|P)&amp;=\dfrac{P(H \cap P)}{P(P)} \\
+&amp;=\dfrac{P(H)P(P|H)}{P(P|H)P(H)+P(P|TH)P(TH)} \\
+&amp;=\dfrac{0.6(0.8)}{0.8(0.6)+0.4(0.4)} \\
+&amp;=\dfrac{0.48}{0.48+0.16} \\
+&amp;=\dfrac{0.48}{0.64} \\
+&amp;=\dfrac{3}{4}
 \end{align*}$$`
 
-sehingga simpangan baku-nya
-
-`$$s=\sqrt{s^2}=\sqrt{\dots}=\dots$$`
-
-_silakan dicoba sendiri_
 ]
+
 
 ---
 
 .pull.center[
-# **Modus**
+#**Teorema Bayes**
 ]
 
 .pull-left[
 
-Susun ulang tabel seperti berikut.
-
-|Modal    |Frek `\((f_i)\)`|| 
-|:-:      |:-:      |:-:|
-|118 - 126|3        |  |
-|127 - 135|5        |  |
-|136 - 144|9        |_**3**_ |
-|145 - 153|_**12**_ |  |
-|154 - 162|5        |_**7**_ |
-|163 - 171|4        |  |
-|172 - 180|2        |  |
-| `\(\sum\)`  |40       |  |
-
-]
-
---
-
-.pull-right[
-
-Perkiraan *modus* berada pada kelas dengan frekuensi terbesar, yaitu kelas ke-4 (145 - 153).
+Jika kasus diperluas di mana kejadian pertama `\(A\)` tersekat menjadi beberapa bagian `\(A_1, A_2, \dots A_k\)` dengan kejadian `\(B\)` terjadi setelahnya, maka
 
 `$$\begin{align*}
-\text{Modus}&amp;=M_0+c\left(\dfrac{f_B}{f_B+f_A} \right) \\
-&amp;=144.5+9\left(\dfrac{3}{3+7} \right) \\
-&amp;=144.5+9\left(\dfrac{3}{10} \right)\\
-&amp;=147.2
+P(B)&amp;=P(B \cap A_1)+P(B \cap A_2)+\dots+P(B \cap A_k) \\
+&amp;=P(B|A_1)P(A_1)+\dots+P(B|A_k)P(A_k)\\
+&amp;=\sum_{i=1}^{k}P(B|A_i)P(A_i)
 \end{align*}$$`
-]
-
-
----
-
-.pull.center[
-# **Kuartil**
-]
-
-.pull-left[
-
-Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
-
-|Modal    |Frek `\((f_i)\)`| Frek Kum|
-|:-:      |:-:      |:-:|---
-|118 - 126|3        |3
-|127 - 135|5        |8
-|136 - 144|9        |17
-|145 - 153|12       |29
-|154 - 162|_**5**_  |34   |Posisi `\(Q_3\)`
-|163 - 171|4        |38
-|172 - 180|2        |40
-| `\(\sum\)`  |40       |
-
-]
-
---
-
-.pull-right[
-
-Misalkan akan dicari `\(Q_3\)`. Posisi `\(Q_3\)` adalah data ke `\(\dfrac{in}{4}=\dfrac{3(40)}{4}=30\)`
-
-Data ke-29 terletak pada kelas ke-4, sehingga data ke-30 pasti berada pada kelas ke-5 atau dalam interval `\(154-162\)`.
-
-Rumus yang digunakan untuk menentukan kuartil ke-i atau `\(Q_i\)` adalah
-
-`$$Q_i=L_0+c\left( \dfrac{ \dfrac{in}{4}-\sum{f_{BQ}}}{f_Q}\right)$$`
-
-dengan `\(L_0\)` adalah batas bawah kelas yang memuat `\(Q_i\)`
-
-]
-
----
-
-.pull.center[
-# **Kuartil**
-]
-
-.pull-left[
-
-Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
-
-|Modal    |Frek `\((f_i)\)`| Frek Kum|
-|:-:      |:-:      |:-:|---
-|118 - 126|3        |3
-|127 - 135|5        |8
-|136 - 144|9        |17
-|145 - 153|12       |29
-|154 - 162|_**5**_  |34   |Posisi `\(Q_3\)`
-|163 - 171|4        |38
-|172 - 180|2        |40
-| `\(\sum\)`  |40       |
-
-]
-
---
-
-.pull-right[
-
+Sehingga peluang bersyarat kejadian `\(A_i\)` diketahui kejadian `\(B\)` adalah
 `$$\begin{align*}
-Q_i&amp;=L_0+c\left(\dfrac{\dfrac{in}{4}-\sum{f_{BQ}}}{f_Q} \right) \\
-Q_1&amp;=135.5+9\left(\dfrac{\dfrac{3(40)}{4}-29}{5} \right) \\
-&amp;=135.5+9\left(\dfrac{30-29}{5} \right)\\
-&amp;=137.3
+P(A_i|B)&amp;=\dfrac{P(A_i \cap B)}{P(B)} \\
+&amp;=\dfrac{P(B|A_i)P(A_i)}{\sum_{i=1}^{k}P(B|A_i)P(A_i)}
 \end{align*}$$`
 
-Coba cari `\(Q_1\)` dan `\(Q_2\)`!
+
+]
+
+.pull-right[
+
+![](gb_15.png)
 ]
 ---
 
-.pull.center[
-# **Tugas Kelompok**
+.pull-left[
+
+.red[**Contoh 43-1**]
+
+Suatu pabrik menggunakan 4 jenis mesin untuk memproduksi suatu barang. Produksi harian mesin pertama, kedua, ketiga, dan keempat masing-masing sebesar 1.000, 1.200, 1.800, dan 2.000 buah. Produksi dari mesin pertama, kedua, ketiga, dan keempat masing-masing mengalami kerusakan sebesar 1%, 0.5%, 0.5%, dan 1%. Sebuah barang dipilih secara acak. Berapa peluang bahwa barang rusak tersebut rusak?
+___
+Misalkan `\(R\)` menyatakan barang yang rusak.&lt;br&gt;
+Peluang barang rusak dari mesin 1, 2, 3, dan 4 adalah &lt;br&gt;
+
+`\(P(R|M_1)=0.01 \hspace{1cm}P(R|M_2)=0.005\)`&lt;br&gt;
+`\(P(R|M_3)=0.005 \hspace{1cm}P(R|M_4)=0.01\)`
+
+Banyaknya ruang contoh, `\(S=1.000+1.200+1.800+2.000=6.000\)`
+
+
+
 ]
 
-- ##**Bentuklah kelompok beranggotan 2 orang**
-- ##**Rincian tugas akan dikirimkan ke group whatsapp**
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Peluang barang yang terpilih berasal dari mesin 1, 2, 3, dan 4 adalah&lt;br&gt;
+`\(P(M_1)=\dfrac{1.000}{6.000}=\dfrac{1}{6} \hspace{0.5cm} P(M_2)=\dfrac{1.200}{6.000}=\dfrac{1}{5}\)`&lt;br&gt;
+`\(P(M_3)=\dfrac{1.800}{6.000}=0.3 \hspace{0.5cm} P(M_4)=\dfrac{2.000}{6.000}=\dfrac{1}{3}\)`
+
+Ditanyakan: `\(P(R)\)`
+`$$\begin{align*}
+P(R)&amp;=P(R|M_1)P(M_1)+\dots+P(R|M_4)P(M_4) \\
+&amp;=0.01\left( \dfrac{1}{6}\right) + \dots + 0.01\left( \dfrac{1}{3}\right) \\
+&amp;=0.0075=0.75\%
+\end{align*}$$`
+
+
+]
+
+
+---
+
+.pull-left[
+
+.red[**Contoh 44-1**]
+
+Suatu pabrik menggunakan 4 jenis mesin untuk memproduksi suatu barang. Produksi harian mesin pertama, kedua, ketiga, dan keempat masing-masing sebesar 1.000, 1.200, 1.800, dan 2.000 buah. Produksi dari mesin pertama, kedua, ketiga, dan keempat masing-masing mengalami kerusakan sebesar 1%, 0.5%, 0.5%, dan 1%. Sebuah barang dipilih secara acak dan ternyata barang tersebut rusak. Berapa peluang bahwa barang rusak tersebut berasal dari mesin pertama?
+___
+Misalkan `\(R\)` menyatakan barang yang rusak.&lt;br&gt;
+Peluang barang rusak dari mesin 1, 2, 3, dan 4 adalah &lt;br&gt;
+
+`\(P(R|M_1)=0.01 \hspace{1cm}P(R|M_2)=0.005\)`&lt;br&gt;
+`\(P(R|M_3)=0.005 \hspace{1cm}P(R|M_4)=0.01\)`
+
+Banyaknya ruang contoh, `\(S=1.000+1.200+1.800+2.000=6.000\)`
+
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Peluang barang yang terpilih berasal dari mesin 1, 2, 3, dan 4 adalah&lt;br&gt;
+`\(P(M_1)=\dfrac{1.000}{6.000}=\dfrac{1}{6} \hspace{0.5cm} P(M_2)=\dfrac{1.200}{6.000}=\dfrac{1}{5}\)`&lt;br&gt;
+`\(P(M_3)=\dfrac{1.800}{6.000}=0.3 \hspace{0.5cm} P(M_4)=\dfrac{2.000}{6.000}=\dfrac{1}{3}\)`
+
+Ditanyakan: `\(P(M_1|R)\)`
+`$$\begin{align*}
+P(M_1|R)&amp;=\dfrac{P(M_1 \cap R)}{P(R)} \\
+&amp;=\dfrac{P(M_1)P(R|M_1)}{0.0075} \\
+&amp;=\dfrac{\dfrac{1}{6}(0.01)}{0.0075}=0.22
+\end{align*}$$`
+
+
+]
+---
+
+.pull-left[
+
+.red[**Contoh 45-1**]
+
+Terdapat 3 buah kotak dengan ukuran yang sama. Kotak pertama berisi 2 bola merah `\((2M)\)`, kotak kedua berisi 1 bola merah dan 1 bola putih `\((1M,1P)\)`, dan kotak ketiga berisi 2 bola putih `\((2P)\)`. Dengan mata tertutup Anda diminta memilih salah satu kotak dan memilih sebuah bola dari kotak terpilih. Anda diberi tahu bahwa bola yang terpilih adalah bola putih. Tentukan peluang kotak yang terpilih adalah kotak ketiga.
+___
+
+Peluang terpilihnya kotak kesatu, kedua, dan ketiga adalah sama besar&lt;br&gt;
+`\(P(K_1)=P(K_2)=P(K_3)=\dfrac{1}{3}\)`&lt;br&gt;
+Peluang terpilihnya bola putih dari setiap kotak&lt;br&gt;
+`\(P(P|K_1)=0\)`&lt;br&gt;
+`\(P(P|K_2)=\dfrac{1}{2}\)`&lt;br&gt;
+`\(P(P|K_3)=\dfrac{2}{2}=1\)`
+]
+
+.pull-right[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Ditanyakan: `\(P(K_3|P)\)`
+`$$\begin{align*}
+P(K_3|P)&amp;=\dfrac{P(K_3 \cap P)}{P(P)} \\
+&amp;=\dfrac{P(P|K_3)P(K_3)}{P(P|K_1)P(K_1)+\dots+P(P|K_3)P(K_3)} \\
+&amp;=\dfrac{1\left(\dfrac{1}{3}\right)}{0\left(\dfrac{1}{3}\right)+\dfrac{1}{2}\left(\dfrac{1}{3}\right)+1\left(\dfrac{1}{3}\right)} \\
+&amp;=\dfrac{\left(\dfrac{1}{3}\right)}{\dfrac{3}{6}}=\dfrac{2}{3}
+\end{align*}$$`
+
+]
 
 ---
 
 class: inverse, middle, center
 
-# **.red[Thank] .green[you]!**
-# **.purple[See] .blue[you] .yellow[next] week**
+#**Thank you!**
+#**See you next week**
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
